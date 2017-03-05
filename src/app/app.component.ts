@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
+import { HeaderComponent } from './header.component';
+
 @Component({
-  selector: 'rb-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    moduleId : module.id,
+    selector: 'rb-root',
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'rb works!';
+    
 }

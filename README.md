@@ -1,5 +1,7 @@
 # RecipeBook
 
+Small application to learn and understanding how to create a web app with Angular2.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
 ## Development server
