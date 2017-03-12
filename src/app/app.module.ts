@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { RecipeService } from './recipes/recipe.service';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
-import { RecepiesComponent } from './recepies/recepies.component';
-import { RecipeListComponent } from './recepies/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './recepies/recipe-list/recipe-item.component';
-import { RecipeDetailComponent } from './recepies/recipe-detail/recipe-detail.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
 import { DropdownDirective } from './dropdown.directive';
@@ -17,7 +19,7 @@ import { DropdownDirective } from './dropdown.directive';
     declarations: [
         AppComponent,
         HeaderComponent,
-        RecepiesComponent,
+        RecipesComponent,
         RecipeListComponent,
         RecipeItemComponent,
         RecipeDetailComponent,
@@ -30,7 +32,7 @@ import { DropdownDirective } from './dropdown.directive';
         FormsModule,
         HttpModule
     ],
-    providers: [],
+    providers: [RecipeService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
