@@ -2,13 +2,13 @@
     <div class="container-fluid">
 
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Recipe Book</a>
+            <a class="navbar-brand" [routerLink]="['/']">Recipe Book</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Recepies</a></li>
-                <li><a href="#">Shopping Lists</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['/recipes']">Recipes</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['/shopping-list']">Shopping Lists</a></li>
             </ul>
            
             <ul class="nav navbar-nav navbar-right">
