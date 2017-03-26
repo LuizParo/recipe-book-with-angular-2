@@ -6,11 +6,11 @@ import { Recipe } from './recipe';
 @Injectable()
 export class RecipeService {
     private recipes: Recipe[] = [
-        new Recipe('Dummy', 'Dummy', 'https://yt3.ggpht.com/-tpPJuK2c8QA/AAAAAAAAAAI/AAAAAAAAAAA/b_tq0T0lyFI/s900-c-k-no-mo-rj-c0xffffff/photo.jpg', [
+        new Recipe('French fries', 'French fries', 'http://www.texaschickenmalaysia.com/menu/sides-french-fries.png', [
             new Ingredient('French fries', 2),
             new Ingredient('Pork meat', 1)
         ]),
-        new Recipe('Dummy 2', 'Dummy 2', 'https://yt3.ggpht.com/-tpPJuK2c8QA/AAAAAAAAAAI/AAAAAAAAAAA/b_tq0T0lyFI/s900-c-k-no-mo-rj-c0xffffff/photo.jpg', []),
+        new Recipe('Bacon', 'Bacon', 'http://www.brechando.com/wp-content/uploads/2016/06/bacon.jpg', []),
     ];
 
     getRecipes(): Recipe[] {
@@ -23,5 +23,14 @@ export class RecipeService {
 
     deleteRecipe(recipe: Recipe): void {
         this.recipes.splice(this.recipes.indexOf(recipe), 1);
+    }
+
+    addRecipe(recipe: Recipe): void {
+        this.recipes.push(recipe);
+    }
+
+    editRecipe(oldRecipe: Recipe, newRecipe: Recipe): void {
+        let index = this.recipes.indexOf(oldRecipe);
+        this.recipes[index] = newRecipe;
     }
 }
