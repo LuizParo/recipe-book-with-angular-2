@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import 'rxjs/Rx';
+
 import { ROUTING } from './app.routing';
 
 import { RecipeService } from './recipes/recipe.service';
